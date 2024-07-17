@@ -1,0 +1,113 @@
+.similar-products {
+  margin-top: 24px;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: space-around;
+  gap: 32px;
+  flex-wrap: wrap;
+  .similar-product {
+    margin-top: 25px;
+    .similar-product-image {
+      padding: 20px 30px;
+      background: rgba(245, 245, 245, 1);
+      img {
+        width: 222px;
+        height: 329px;
+      }
+    }
+    .similar-product-about {
+      p {
+        font-weight: 600;
+        font-size: 16px;
+        margin: 4px 0;
+      }
+      span {
+        color: rgba(148, 148, 148, 1);
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+    .similar-product-stars {
+      display: flex;
+      margin: 5px 0;
+      gap: 5px;
+      svg {
+        cursor: pointer;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    button {
+      margin-top: 28px;
+      cursor: pointer;
+      background: rgba(30, 144, 255, 1);
+      border-radius: 16px;
+      border: none;
+      padding: 12.5px 0;
+      width: 100%;
+      font-weight: 600;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .similar-products {
+    margin-top: 24px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+    flex-wrap: wrap;
+    .similar-product {
+      margin-top: 25px;
+      .similar-product-image {
+        padding: 8px 16px;
+        background: rgba(245, 245, 245, 1);
+        img {
+          width: 164px;
+          height: 236px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 391px) {
+  .similar-products {
+    gap: 11px;
+    .similar-product {
+      width: 160px;
+      .similar-product-image {
+        display: flex;
+        justify-content: center;
+        background: rgba(245, 245, 245, 1);
+        img {
+          width: 135px;
+          height: 199px;
+        }
+      }
+      .similar-product-about {
+        p {
+          font-size: 14px;
+        }
+        .price {
+          font-size: 16px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+      .similar-product-stars {
+        align-items: center;
+        svg {
+          cursor: pointer;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
