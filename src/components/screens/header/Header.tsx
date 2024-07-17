@@ -5,7 +5,7 @@ import Menu from './menu/Menu';
 
 const Header = ({ data, error, loading }: IData) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSearchActive, setIsSearchActive] = useState(true);
+  const [isSearchActive, setIsSearchActive] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const [search, setSearch] = useState('');
 
