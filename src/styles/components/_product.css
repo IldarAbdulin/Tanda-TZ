@@ -48,7 +48,7 @@
     background: rgba(245, 245, 245, 1);
     padding: 20px 30px;
     img {
-      width: 323px;
+      width: 400px;
       height: 460px;
     }
     .swiper {
@@ -245,11 +245,11 @@
         }
         .mySwiper-mobile {
           display: flex !important;
-          width: 274px;
-          height: 390px;
+          width: 364px;
+          height: 410px;
           img {
-            width: 274px;
-            height: 390px;
+            width: 364px;
+            height: 410px;
           }
         }
       }

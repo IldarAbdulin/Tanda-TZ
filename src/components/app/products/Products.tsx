@@ -12,28 +12,52 @@ import SimilarProducts from './similar-products/SimilarProducts';
 import ProductBlock from './product-block/ProductBlock';
 import Modal from './modal/Modal';
 
-const swiperArr = [
-  { id: 1, image: Machine },
-  { id: 2, image: Machine },
-  { id: 3, image: Machine },
-  { id: 4, image: Machine },
-  { id: 5, image: Machine },
-  { id: 6, image: Machine },
-  { id: 7, image: Machine },
-  { id: 8, image: Machine },
-];
-
 const Products = ({ data, error, loading }: IData) => {
   const [showBlockWithProduct, setShowBlockWithProduct] = useState(false);
   const [isModalActive, setIsModalActive] = useState(false);
   const [currentImage, setCurrentImage] = useState<string>();
   const arr = new Array(8).fill({
-    image: Machine,
+    image: `https://uno.kg/_next/image?url=https%3A%2F%2Fapi.uno.kg/${data?.barcode?.images[0].url}&w=256&q=75`,
     price: data?.barcode?.sellingPrice,
     brend: data?.barcode?.category.parent.name,
     name: data?.barcode?.category.name,
     stars: 0,
   });
+
+  const swiperArr = [
+    {
+      id: 1,
+      image: `https://uno.kg/_next/image?url=https%3A%2F%2Fapi.uno.kg/${data?.barcode?.images[0].url}&w=256&q=75`,
+    },
+    {
+      id: 2,
+      image: `https://uno.kg/_next/image?url=https%3A%2F%2Fapi.uno.kg/${data?.barcode?.images[0].url}&w=256&q=75`,
+    },
+    {
+      id: 3,
+      image: `https://uno.kg/_next/image?url=https%3A%2F%2Fapi.uno.kg/${data?.barcode?.images[0].url}&w=256&q=75`,
+    },
+    {
+      id: 4,
+      image: `https://uno.kg/_next/image?url=https%3A%2F%2Fapi.uno.kg/${data?.barcode?.images[0].url}&w=256&q=75`,
+    },
+    {
+      id: 5,
+      image: `https://uno.kg/_next/image?url=https%3A%2F%2Fapi.uno.kg/${data?.barcode?.images[0].url}&w=256&q=75`,
+    },
+    {
+      id: 6,
+      image: `https://uno.kg/_next/image?url=https%3A%2F%2Fapi.uno.kg/${data?.barcode?.images[0].url}&w=256&q=75`,
+    },
+    {
+      id: 7,
+      image: `https://uno.kg/_next/image?url=https%3A%2F%2Fapi.uno.kg/${data?.barcode?.images[0].url}&w=256&q=75`,
+    },
+    {
+      id: 8,
+      image: `https://uno.kg/_next/image?url=https%3A%2F%2Fapi.uno.kg/${data?.barcode?.images[0].url}&w=256&q=75`,
+    },
+  ];
 
   const openModal = () => {
     setIsModalActive(true);
@@ -61,6 +85,8 @@ const Products = ({ data, error, loading }: IData) => {
   useEffect(() => {
     setCurrentImage(swiperArr[0].image);
   }, []);
+
+  console.log(data?.barcode?.images[0].url);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;

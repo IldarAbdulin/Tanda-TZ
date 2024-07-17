@@ -2,17 +2,16 @@
   margin-top: 24px;
   margin-bottom: 200px;
   display: flex;
-  justify-content: space-around;
-  gap: 32px;
+  justify-content: space-between;
   flex-wrap: wrap;
   .similar-product {
     margin-top: 25px;
     .similar-product-image {
-      padding: 20px 30px;
+      padding: 10px;
       background: rgba(245, 245, 245, 1);
       img {
-        width: 222px;
-        height: 329px;
+        width: 269px;
+        height: 253px;
       }
     }
     .similar-product-about {
@@ -60,16 +59,16 @@
     margin-bottom: 50px;
     display: flex;
     justify-content: start;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
     .similar-product {
       margin-top: 25px;
       .similar-product-image {
-        padding: 8px 16px;
+        padding: 8px;
         background: rgba(245, 245, 245, 1);
         img {
-          width: 164px;
-          height: 236px;
+          width: 184px;
+          height: 206px;
         }
       }
     }
@@ -86,7 +85,7 @@
         background: rgba(245, 245, 245, 1);
         img {
           width: 135px;
-          height: 199px;
+          height: 149px;
         }
       }
       .similar-product-about {
